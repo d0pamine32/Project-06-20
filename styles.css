@@ -9,6 +9,7 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     color: #ff69b4;
     text-align: center;
+    overflow: hidden;
 }
 
 .container {
@@ -39,7 +40,7 @@ button {
     cursor: pointer;
     margin-top: 20px;
     margin-right: 10px;
-    position: relative
+    position: relative; 
 }
 
 button:hover {
@@ -70,11 +71,6 @@ button:hover {
     margin: 5px;
 }
 
-#yesButton11 {
-    pointer-events: none;
-    opacity: 0.6;
-    cursor: not-allowed;
-}
 
 #overlay {
     display: none;
