@@ -21,21 +21,22 @@ function showCustomPopup() {
 }
 
 function moveButton(button) {
-    // Get container dimensions
-    const containerRect = document.querySelector('.container').getBoundingClientRect();
+    // Get viewport dimensions
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
     
     // Get button dimensions
     const buttonRect = button.getBoundingClientRect();
     
-    // Calculate new random position within the container
-    const maxX = containerRect.width - buttonRect.width;
-    const maxY = containerRect.height - buttonRect.height;
+    // Calculate new random position within the viewport
+    const maxX = viewportWidth - buttonRect.width;
+    const maxY = viewportHeight - buttonRect.height;
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
     
     // Move the button to the new position
     button.style.left = randomX + 'px';
-    button.style.top = randomY + 'px';
+    button.style.top = randomY + 'px';;
 }
 
 // Add event listeners to both buttons
