@@ -21,10 +21,10 @@ function showCustomPopup() {
 }
 
 function moveButton(button) {
-    // Get viewport dimensions
+      // Get the viewport dimensions
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    
+
     // Get button dimensions
     const buttonRect = button.getBoundingClientRect();
     
@@ -33,10 +33,11 @@ function moveButton(button) {
     const maxY = viewportHeight - buttonRect.height;
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
-    
+
     // Move the button to the new position
+    button.style.position = 'absolute'; // Ensure the button's position is set to absolute
     button.style.left = randomX + 'px';
-    button.style.top = randomY + 'px';;
+    button.style.top = randomY + 'px';
 }
 
 // Add event listeners to both buttons
